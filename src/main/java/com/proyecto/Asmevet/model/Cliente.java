@@ -12,23 +12,22 @@ import lombok.Data;
 @Data
 public class Cliente {//nombre de la tabla
     @Id
-    @Column
-    //id del cliente
+    @Column (name="Id usuario")
     private Long iduser;
     
     //nombre del cliente
-    @Column
+    @Column (name="Nombre", nullable=false, length = 15)
     private String nombre;
     
     //apellido del cliente
-    @Column
+    @Column (nullable=false, length = 15)
     private String apellido;
     
     //email del cliente
-    @Column
+    @Column (unique=true, nullable=false, length =100)
     private String email;
     
     //celular del cliente
-    @Column
+    @Column (name = "celular", nullable=false, length = 10)
     private String celular;
 }

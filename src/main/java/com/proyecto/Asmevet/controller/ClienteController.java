@@ -34,8 +34,8 @@ public class ClienteController {
         return this.clienteService.modifyCliente(cliente);
     }
     //eliminar
-    @PostMapping(value="/(id)")
-    public Boolean deleteAprendiz(@PathVariable(value="id") Long id) {
+    @PostMapping(value="/{id}")
+    public Boolean deleteCliente(@PathVariable(value="id") Long id) {
         return this.clienteService.deleteCliente(id);
     }
 }
